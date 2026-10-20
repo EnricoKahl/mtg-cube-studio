@@ -37,3 +37,13 @@ Bestehende `.cube.json`-Dateien vorher zusätzlich sichern.
 - `CubeStudio/Services/ProjectService.cs`: lokale JSON-Projekte, TXT-Export
 - `CubeStudio/UI/MainForm.cs`: Hauptfenster und Tabs
 - `CubeStudio/UI/CubeCanvas.cs`: selbst gezeichneter Karteneditor mit Hover- und Mengen-Overlay
+
+
+## Änderungen v0.2.1
+
+- Stapelansicht: Beim Hover wird die Karte an der Position ihres sichtbaren Kopfes vollständig vor den anderen Karten dargestellt. Für die Vorschau wird das Scryfall-`normal`-Bild asynchron geladen; bis dahin dient das kleine Bild als Platzhalter.
+- Mengen-Badges verwenden nun dieselbe transformierte Zeichenfläche wie die Karten und scrollen damit mit.
+- Neu erzeugte Set-Cubes enthalten keine Standardländer (`Basic Land`), damit sie nicht in die Common-Gesamtzahl und die Booster-Obergrenze einfließen. Nichtstandardländer bleiben enthalten.
+- Bereits gespeicherte Set-Cubes werden beim Öffnen **nicht automatisch verändert**. Um Standardländer aus einem alten Set-Cube zu entfernen, den Cube unter Sicherung der Projektdatei neu generieren.
+
+Noch nicht mit einem Windows-Build oder einem WinForms-Oberflächentest verifiziert.
